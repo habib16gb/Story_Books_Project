@@ -2,6 +2,7 @@
 <html lang="en">
   <%- include('./layout/head') %>
   <body>
+    <%- include('./partials/_header') %>
     <div class="container">
       <h1><%= title %></h1>
       <p>
@@ -12,4 +13,7 @@
     </div>
   </body>
   <%- include('./layout/materialize') %>
+  <script>
+    M.Sidenav.init(document.querySelector(".sidenav"));
+  </script>
 </html>

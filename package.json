@@ -26,6 +26,7 @@
     "passport-google-oauth20": "^2.0.0"
   },
   "devDependencies": {
+    "@types/express-session": "^1.17.7",
     "@types/morgan": "^1.9.4",
     "@types/passport": "^1.0.12",
     "@types/passport-google-oauth20": "^2.0.11",

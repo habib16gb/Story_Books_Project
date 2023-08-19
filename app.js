@@ -4,9 +4,12 @@ import colors from "colors";
 import morgan from "morgan";
 import passport from "passport";
 import session from "express-session";
+import MongoStore from "connect-mongo";
 import connectDB from "./config/db.js";
 import router from "./routes/index.js";
+import routerAuth from "./routes/auth.js";
 import passportConfig from "./config/passport.js";
+import mongoose from "mongoose";
 
 config();
 passportConfig(passport);
@@ -37,6 +40,7 @@ app.use(passport.session());
 app.use(express.static("static"));
 
 app.use("/", router);
+app.use("/auth", routerAuth);
 
 app.listen(PORT, () =>
   console.log(

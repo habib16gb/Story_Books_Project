@@ -19,6 +19,7 @@ Create a Node.js Application Using Express, MongoDB &amp; Google OAuth
 # Insall devDependencies
 
 - @types/morgan
+- @types/express-session
 - @types/passport
 - @types/passport-google-oauth20
 - cross-env
@@ -35,3 +36,15 @@ Create a Node.js Application Using Express, MongoDB &amp; Google OAuth
 # Add connecDB fonction inside db.js file
 
 # Create app.js File and import (express, colors & connectDB)
+
+# Add Template Engine files & Layouts (Login & Dashboard)
+
+# Add routes Folder and index.js File
+
+# Add Static Folder (css & js)
+
+# Start Google Login And Add Passport Config & Sessions
+
+# Create User Model & Add Passport Google Strategy
+
+# Add auth.js File in routes Folder

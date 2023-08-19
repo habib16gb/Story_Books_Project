@@ -1,4 +1,5 @@
 import express from "express";
+import ensure from "../middleware/auth.js";
 
 const router = express.Router();
 
@@ -6,7 +7,7 @@ const router = express.Router();
 // @route     GET /
 // @access    Public
 
-router.get("/", (req, res) => {
+router.get("/", ensure.ensureGuest, (req, res) => {
   res.render("login", { title: "login page" });
 });
 
@@ -14,7 +15,7 @@ router.get("/", (req, res) => {
 // @route     GET /dashboard
 // @access    Private
 
-router.get("/dashboard", (req, res) => {
+router.get("/dashboard", ensure.ensureAuth, (req, res) => {
   res.render("dashboard", { title: "dashboard page" });
 });
 
